@@ -1,0 +1,375 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: arial, sans-serif;
+}
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper2{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header_wrap{
+    background-color: rgb(218, 49, 44);
+    border-bottom: 2px solid rgba(186, 174, 8, 0.982);
+}
+.container{
+    margin: 0 auto;
+    max-width: 960px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#logo img{
+    max-width: 85px;
+    height: auto;
+}
+#logo{
+    padding: 4.5px 0px;
+}
+
+.main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.main-menu li {
+    position: relative;
+    /* height: 60px; */
+}
+
+.main-menu li a{
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+    display: block;
+   
+    text-align: center;
+    box-sizing: border-box;
+    
+    font-size: 15px;
+    
+}
+
+.main-menu ul.sub-menu {
+    position: absolute;
+    background-color: rgb(218, 49, 44);
+    padding: 15px 0px;
+    list-style: none;
+    width: 150px;
+    border: 1px solid rgba(186, 174, 8, 0.982);
+    display: none;
+}
+
+.main-menu li:hover>ul.sub-menu {
+    display: block;
+}
+
+.main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid white;
+}
+.main-menu ul.sub-menu li:hover a {
+    border-bottom: 1px solid rgba(186, 174, 8, 0.982);
+    color: rgba(186, 174, 8, 0.982);
+}
+
+.main-menu ul.sub-menu li:last-child a {
+    border: none;
+}
+
+/*thiết lập border khi hover */
+.main-menu>li>a{
+    position: relative;
+}
+.main-menu>li:hover>a{
+    color: rgba(186, 174, 8, 0.982);
+}
+
+.main-menu>li>a::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: rgba(186, 174, 8, 0.982);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+   
+}
+.main-menu>li:hover>a::before {
+    width: 100%;
+    
+} 
+
+/* boder bottom header */
+header{
+    border-bottom: 5px solid rgba(186, 174, 8, 0.982);
+}
+
+/* login */
+
+.login{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login li a{
+    color: white;
+   
+    padding: 18px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgba(186, 174, 8, 0.982);
+    border-radius: 22rem;
+    transition: all 300ms ease;
+}
+
+.login li { 
+    margin: 5px;
+}
+
+.login li:hover a{
+    background-color: white;
+    color: rgba(186, 174, 8, 0.982);
+}
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 24px;
+    color: #333;
+    border-left: 5px solid #4CAF50;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lưới danh sách cầu thủ */
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Thẻ cầu thủ */
+.player-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ảnh cầu thủ */
+.player-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Thông tin cầu thủ */
+.player-card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.player-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.player-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+.stadium-info, .coach-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stadium-info img, .coach-info img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.stadium-info p, .coach-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 20px auto; /* Thêm khoảng cách phía trên và căn giữa */
+    padding: 20px; /* Thêm padding bên trong thẻ */
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Căn giữa tên cầu thủ */
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.player-image {
+    flex: 0 0 200px;
+    margin-right: 20px;
+}
+
+.player-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bo tròn góc cho hình ảnh */
+}
+
+.player-info {
+    flex: 1;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-label {
+    flex: 0 0 100px;
+    font-weight: bold;
+}
+
+.info-value {
+    flex: 1;
+    text-align: right; /* Căn phải giá trị thông tin */
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab.active {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 4px;
+}
+.ft-thong-tin{
+    background-color: #151d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.ft-thong-tin p{
+    color: white;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.ft-tt-item{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.ft-tt-item-text{
+    max-height: 60px;
+    padding: 0;
+}
+
+.ft-tt-item-1{
+    display: flex;
+    gap: 10px;
+}
+
+.ft-tt-item-1{
+    margin: 25px 0;
+}
+.list-link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.list-link a{
+    color: #81d4fa;
+    text-decoration: none;
+}
+.list-link a:hover{
+    text-decoration: none;
+    color: #81d4fa;
+}
+
+/* css ft-hea */
+.ft-hea{
+    background-color: rgb(218, 49, 44);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.ft-hea .ft-hea-logo a img{
+    width: 5%;
+    height: auto;
+}
+
+/* css ft-bottom */
+.ft-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ft-bottom .ft-bt-text{
+    font-size: 12px;
+}

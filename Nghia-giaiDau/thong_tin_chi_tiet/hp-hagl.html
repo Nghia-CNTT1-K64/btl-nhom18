@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin chi tiết</title>
+    <link rel="icon" href="../../Vanh-trangChu/logo/logo_vuong.png" type="image/png">
+    <link rel="stylesheet" href="thong-tin-chi-tiet.css">
+    <link rel="stylesheet" href="../menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="boc">
+        <div class="header_boc">
+            <nav class="hop_dung">
+                <a href="../../Vanh-trangChu/v_league.html" id="logo">
+                    <img src="../../Vanh-trangChu/logo/logo_ngang.png" alt="">
+                </a>
+                <ul class="main-menu">
+                    <li><a href="../../Vanh-trangChu/v_league.html">Trang chủ</a></li>
+                    <li><a href="../../Nghia-giaiDau/giaiDau.html">Thông tin giải đấu</a>
+                        
+                    </li>
+                    <li><a href="../../Hien-bangXepHang/Webbongda.html">Bảng xếp hạng</a></li>
+                    <li><a href="../../Trinh-doiBong/qlvl.html">Quản lí đội bóng</a>   
+                    </li>
+                    <li><a href="../../Dung-TinTuc/muctintuc/baitaplon.html">Tin tức</a></li>
+                </ul>
+                <ul class="login">
+                    <li id="dangnhap"><a href="../../Hien-bangXepHang/dangnhap.html" >Đăng nhập</a></li>
+                    <li id="mua vé"><a href="../../Hien-bangXepHang/vesan.html">Mua vé</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="main">
+        <div class="container">
+            <div class="match-header">
+                <h1>V-League 2023/24</h1>
+                <div class="match-date">20/10/2024 - 18:00</div>
+            </div>
+
+            <div class="match-card">
+                <div class="team home">
+                    <a href="../../Trinh-doiBong/teams/hp.html">
+                        <img src="../anh/logo-haiphong.png" alt="logo-haiphong" class="team-logo">
+                        <h2 class="team-name">Hải Phòng</h2>
+                    </a>
+                </div>
+
+                <div class="match-info">
+                    <div class="score">
+                        <span class="home-score">1</span>
+                        <span class="score-divider">-</span>
+                        <span class="away-score">1</span>
+                    </div>
+                    <div class="match-status">Trận đấu kết thúc</div>
+                </div>
+
+                <div class="team away">
+                    <a href="../../Trinh-doiBong/teams/hagl.html">
+                        <img src="../anh/logo-hoanganhgialai.png" alt="logo-hoanganhgialai" class="team-logo">
+                        <h2 class="team-name">Hoàng Anh Gia Lai</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="match-details">
+                <div class="tabs">
+                    <button class="tab active" data-tab="overview">Tổng quan</button>
+                    <button class="tab" data-tab="stats">Thống kê</button>
+                    <button class="tab" data-tab="lineup">Đội hình</button>
+                    <button class="tab" data-tab="h2h">H2H</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Tab Tổng quan -->
+                    <div class="content-section active" id="overview">
+                        <div class="match-info-details">
+                            <div class="info-item">
+                                <span class="label">Giải đấu:</span>
+                                <span class="value">V-League 2023/24</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Vòng đấu:</span>
+                                <span class="value">Vòng 1</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Sân vận động:</span>
+                                <span class="value"><a href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_L%E1%BA%A1ch_Tray" target="_blank">
+                                    Lạch Tray</a></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Trọng tài:</span>
+                                <span class="value"><a href="">Hoàng Văn Nghĩa</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Thống kê -->
+                    <div class="content-section" id="stats">
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-bar">
+                                    <div class="bar home" style="width: 60%"></div>
+                                    <div class="bar away" style="width: 40%"></div>
+                                </div>
+                                <div class="stat-labels">
+                                    <span class="home">60%</span>
+                                    <span class="label">Kiểm soát bóng</span>
+                                    <span class="away">40%</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-bar">
+                                    <div class="bar home" style="width: 70%"></div>
+                                    <div class="bar away" style="width: 30%"></div>
+                                </div>
+                                <div class="stat-labels">
+                                    <span class="home">7</span>
+                                    <span class="label">Sút</span>
+                                    <span class="away">3</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-bar">
+                                    <div class="bar home" style="width: 75%"></div>
+                                    <div class="bar away" style="width: 25%"></div>
+                                </div>
+                                <div class="stat-labels">
+                                    <span class="home">3</span>
+                                    <span class="label">Sút trúng đích</span>
+                                    <span class="away">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Đội hình -->
+                    <div class="content-section" id="lineup">
+                        <div class="lineup-title">
+                            <h3>Đội hình ra sân:</h3>
+                        </div>
+                        <div class="lineup-container">
+                            <div class="team-lineup home">
+                                
+                                <table class="players-table">
+                                    <thead>                           
+                                        <tr>
+                                            <th>Số áo</th>
+                                            <th>Tên cầu thủ</th>
+                                            <th>Vị trí</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href="">Nguyễn Đình Triệu</a></td>
+                                            <td>GK</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30</td>
+                                            <td><a href="">Lương Hoàng Nam</a></td>
+                                            <td>CB</td>
+                                            <td><i class="arrow down-arrow">&#8595;</i> 3'</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td><a href="">Lucas Vinicius</a></td>
+                                            <td>LW</td>
+                                            <td></td>
+                                        </tr>
+                                        <!-- Thêm cầu thủ khác -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="team-lineup away">
+                                
+                                <table class="players-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Số áo</th>
+                                            <th>Tên cầu thủ</th>
+                                            <th>Vị trí</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>25</td>
+                                            <td><a href="">Hữu Kiên</a></td>
+                                            <td>GK</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td><a href="">Martin Dzilah</a></td>
+                                            <td>FW</td>
+                                            <td><i class="arrow down-arrow">&#8595;</i>80'</td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td><a href="">Văn Thanh</a></td>
+                                            <td>RB</td>
+                                            <td></td>
+                                        </tr>
+                                        <!-- Thêm cầu thủ khác -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="lineup-title">
+                            <h3>Cầu thủ dự bị:</h3>
+                        </div>
+                        <div class="lineup-container">
+                            <div class="team-lineup home">
+                                <table class="players-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>12</td>
+                                            <td><a href="">Hoài Anh</a></td>
+                                            <td>GK</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30</td>
+                                            <td><a href="">Lê Mạnh Dũng</a></td>
+                                            <td>CB</td>
+                                            <td><i class="arrow up-arrow">&#8593;</i> 3'</td>
+                                        </tr>
+                                        <tr>
+                                            <td>79</td>
+                                            <td><a href="">Nguyễn Anh Hùng</a></td>
+                                            <td>CB</td>
+                                            <td></td>
+                                        </tr>
+                                        <!-- Thêm cầu thủ khác -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="team-lineup away">
+                                
+                                <table class="players-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>18</td>
+                                            <td><a href="">Thế Anh</a></td>
+                                            <td>GK</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>27</td>
+                                            <td><a href="">Duy Khánh</a></td>
+                                            <td>DF</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td><a href="">Văn Toàn</a></td>
+                                            <td>FW</td>
+                                            <td><i class="arrow up-arrow">&#8593;</i> 80'</td>
+                                        </tr>
+                                        <!-- Thêm cầu thủ khác -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab H2H -->
+                    <div class="content-section" id="h2h">
+                        <div class="h2h-container">
+                            <h3>5 Trận đối đầu gần nhất</h3>
+                            <div class="h2h-matches"></div>
+                                <div class="h2h-match">
+                                    <span class="date">30/6/2024</span>
+                                    <div class="match-result">
+                                        <span class="team">Hải Phòng</span>
+                                        <span class="score">1 - 2</span>
+                                        <span class="team">Hoàng Anh Gia Lai</span>
+                                    </div>
+                                </div>
+                            
+                                <div class="h2h-match">
+                                    <span class="date">20/10/2023</span>
+                                    <div class="match-result">
+                                        <span class="team">Hải Phòng</span>
+                                        <span class="score">1 - 1</span>
+                                        <span class="team">Hoàng Anh Gia Lai</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Thêm các trận đấu khác -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script src="thong-tin-chi-tiet.js"></script>
+</body>
+</html>

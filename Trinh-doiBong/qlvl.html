@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="V_league 2023/24">
+    <meta name="keywords" content="Dội bóng v_league 2023/24, cầu thủ v-league">
+    <meta name="author" content="Trần Văn Trình">
+    <link rel="stylesheet" href="styles.css">
+    <title>V-League 2023-2024 Clubs</title>
+    <link rel="icon" href="../Vanh-trangChu/logo/logo_vuong.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">&#9650;</button>
+    <div class="boc">
+        <div class="header_boc">
+            <nav class="hop_dung">
+                <a href="../Vanh-trangChu/v_league.html" id="logo">
+                    <img src="../Vanh-trangChu/logo/logo_ngang.png" alt="">
+                </a>
+                <ul class="main-menu">
+                    <li><a href="../Vanh-trangChu/v_league.html">Trang chủ</a></li>
+                    <li><a href="../Nghia-giaiDau/giaiDau.html">Thông tin giải đấu</a>
+                    </li>
+                    <li><a href="../Hien-bangXepHang/Webbongda.html">Bảng xếp hạng</a></li>
+                    <li><a href="../Trinh-doiBong/qlvl.html">Quản lí đội bóng</a>   
+                    </li>
+                    <li><a href="../Dung-TinTuc/muctintuc/baitaplon.html">Tin tức</a></li>
+                </ul>
+                <ul class="login">
+                    <li id="dangnhap"><a href="../Hien-bangXepHang/dangnhap.html" >Đăng nhập</a></li>
+                    <li id="mua vé"><a href="../Hien-bangXepHang/vesan.html">Mua vé</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="allPlayers" style="display: none;">
+        <div class="player-card" data-name="Bùi Tiến Dũng" data-link="./profile/btdung.html"
+            data-img="./anhlogo/The_Cong-Viettel_FC_logo.svg.png"></div>
+        <div class="player-card" data-name="Bùi Văn Đức" data-link="./profile/bvduc.html"
+            data-img="./anhlogo/HLHT_FC.svg.png"></div>
+        <div class="player-card" data-name="Geovane Magno Candido Silveira" data-link="./profile/candido.html"
+            data-img="./anhlogo/HLHT_FC.svg.png"></div>
+        <div class="player-card" data-name="Trần Đình Tiến" data-link="./profile/dinhtien.html"
+            data-img="./anhlogo/HLHT_FC.svg.png"></div>
+        <div class="player-card" data-name="Mpande Joseph Mbolimbo" data-link="./profile/josepmpande.html"
+            data-img="./anhlogo/Hải_Phòng_FC_2021.svg.png"></div>
+        <div class="player-card" data-name="Lương Hoàng Nam" data-link="./profile/lhnam.html"
+            data-img="./anhlogo/Hải_Phòng_FC_2021.svg.png"></div>
+        <div class="player-card" data-name="Goncalves Silva Lucas Vinicius" data-link="./profile/lucas.html"
+            data-img="./anhlogo/Hải_Phòng_FC_2021.svg.png"></div>
+        <div class="player-card" data-name="Nguyễn Anh Hùng" data-link="./profile/nahung.html"
+            data-img="./anhlogo/Hải_Phòng_FC_2021.svg.png"></div>
+        <div class="player-card" data-name="Nguyễn Đình Triệu" data-link="./profile/ndtrieu.html"
+            data-img="./anhlogo/Hải_Phòng_FC_2021.svg.png"></div>
+        <div class="player-card" data-name="Nguyễn Văn Quyết" data-link="./profile/nvquyet.html"
+            data-img="./anhlogo/Logo_HN_FC.svg.png"></div>
+        <div class="player-card" data-name="Quế Ngọc Hải" data-link="./profile/qnhai.html"
+            data-img="./anhlogo/Logo_of_Becamex_Bình_Dương_FC.svg.png"></div>
+        <div class="player-card" data-name="Nguyễn Tiến Linh" data-link="./profile/tienlinh.html"
+            data-img="./anhlogo/Logo_of_Becamex_Bình_Dương_FC.svg.png"></div>
+        <div class="player-card" data-name="Nguyễn Trọng Hùng" data-link="./profile/tronghung.html"
+            data-img="./anhlogo/DATHFC_logo.svg.png"></div>
+        <div class="player-card" data-name="Werick Caetano De Oliveira" data-link="./profile/werick.html"
+            data-img="./anhlogo/SHB_Danang_logo.svg.png"></div>
+    </div>
+    <main>
+        <div class="search">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="globalSearchPlayer" placeholder="Tìm kiếm cầu thủ...">
+        </div>
+        <div id="searchResults"></div>
+        <div class="clubs">
+            <div class="club">
+                <a href="./teams/hanoifc.html">
+                    <img src="./anhlogo/Logo_HN_FC.svg.png" alt="Hà Nội FC">
+                    <h2>Hà Nội FC</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/hcm.html">
+                    <img src="./anhlogo/HCMCFC_logo.svg.png" alt="Hồ Chí Minh City FC">
+                    <h2>Hồ Chí Minh City FC</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/bcmbd.html">
+                    <img src="./anhlogo/Logo_of_Becamex_Bình_Dương_FC.svg.png" alt="Becamex Bình Dương">
+                    <h2>Becamex Bình Dương</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/viettel.html">
+                    <img src="./anhlogo/The_Cong-Viettel_FC_logo.svg.png" alt="Viettel FC">
+                    <h2>Viettel FC</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/txnđ.html">
+                    <img src="./anhlogo/thepxanhNĐ.svg.png" alt="Viettel FC">
+                    <h2>Thép xanh Nam Định</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/đath.html">
+                    <img src="./anhlogo/DATHFC_logo.svg.png" alt="Viettel FC">
+                    <h2>Đông Á Thanh Hóa</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/hp.html">
+                    <img src="./anhlogo/Hải_Phòng_FC_2021.svg.png" alt="Viettel FC">
+                    <h2>Hải Phòng </h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/hlht.html">
+                    <img src="./anhlogo/HLHT_FC.svg.png" alt="Viettel FC">
+                    <h2>Hồng Lĩnh Hà Tĩnh</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/cahn.html">
+                    <img src="./anhlogo/Logo_CAHN_FC.svg.png" alt="Viettel FC">
+                    <h2>Công An Hà Nội</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/kkh.html">
+                    <img src="./anhlogo/Logo-clb-Khatoco-Khanh-Hoa.png" alt="Viettel FC">
+                    <h2>Khatoco Khánh Hòa</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/quangnam.html">
+                    <img src="../Nghia-giaiDau/anh/logo-quangnam.jpg" alt="Viettel FC">
+                    <h2>Quảng Nam FC</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/slna.html">
+                    <img src="./anhlogo/SLNA_FC_logo.svg.png" alt="Viettel FC">
+                    <h2>SLNA</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/tbđ.html">
+                    <img src="./anhlogo/Binh_Dinh_FC_logo.svg.png" alt="Viettel FC">
+                    <h2>MeryLand Bình Định</h2>
+                </a>
+            </div>
+            <div class="club">
+                <a href="./teams/hagl.html">
+                    <img src="./anhlogo/Hoàng_Anh_Gia_Lai_FC.png" alt="Viettel FC">
+                    <h2>Hoàng Anh Gia Lai</h2>
+                </a>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Club</th>
+                    <th>Stadium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/Logo_HN_FC.svg.png" alt="Hà Nội FC Logo">
+                        <a href="./teams/hanoifc.html">Hà Nội FC</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hang_Day.jpg/150px-Hang_Day.jpg"
+                            alt="Hàng Đẫy Stadium" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_H%C3%A0ng_%C4%90%E1%BA%ABy">Sân
+                            vận động Hàng Đẫy</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/HCMCFC_logo.svg.png" alt="Hồ Chí Minh City FC Logo">
+                        <a href="./teams/hcm.html">Hồ Chí Minh City FC</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Th%E1%BB%91ng_Nh%E1%BA%A5t_Stadium_2022.jpg/150px-Th%E1%BB%91ng_Nh%E1%BA%A5t_Stadium_2022.jpg"
+                            alt="Thống Nhất Stadium" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Th%E1%BB%91ng_Nh%E1%BA%A5t">Sân
+                            vận động Thống Nhất</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/Logo_of_Becamex_Bình_Dương_FC.svg.png" alt="Becamex Bình Dương Logo">
+                        <a href="./teams/bcmbd.html">Becamex Bình Dương</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/B%C3%ACnh_D%C6%B0%C6%A1ng_Stadium_2023.jpg/150px-B%C3%ACnh_D%C6%B0%C6%A1ng_Stadium_2023.jpg"
+                            alt="Gò Đậu Stadium" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_G%C3%B2_%C4%90%E1%BA%ADu">Sân
+                            vận động Gò Đậu</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/The_Cong-Viettel_FC_logo.svg.png" alt="Viettel FC Logo">
+                        <a href="./teams/viettel.html">Viettel FC</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hang_Day.jpg/150px-Hang_Day.jpg"
+                            alt="Hàng Đẫy Stadium" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_H%C3%A0ng_%C4%90%E1%BA%ABy">Sân
+                            vận động Hàng Đẫy</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/thepxanhNĐ.svg.png" alt=" #">
+                        <a href="./teams/txnđ.html">Thép xanh Nam Định</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Thi%C3%AAn_Tr%C6%B0%E1%BB%9Dng.jpg/150px-S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Thi%C3%AAn_Tr%C6%B0%E1%BB%9Dng.jpg"
+                            alt=" #" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Thi%C3%AAn_Tr%C6%B0%E1%BB%9Dng">Sân
+                            vận động Thiên Trường</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/DATHFC_logo.svg.png" alt=" #">
+                        <a href="./teams/đath.html">Đông Á Thanh Hóa</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/San-thanh-hoa-thay-da-doi-thit-truoc-them-flc-cup-2016.jpg/150px-San-thanh-hoa-thay-da-doi-thit-truoc-them-flc-cup-2016.jpg"
+                            alt=" #" width="50">
+                        <a href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Thanh_H%C3%B3a">Sân
+                            vận động Thanh Hóa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/Hải_Phòng_FC_2021.svg.png" alt=" #">
+                        <a href="./teams/hp.html">Hải Phòng</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/San-lach-tray.jpg/150px-San-lach-tray.jpg"
+                            alt=" #" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_L%E1%BA%A1ch_Tray">Sân
+                            vận động Lạch Tray</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/HLHT_FC.svg.png" alt=" #">
+                        <a href="./teams/hlht.html">Hồng Lĩnh Hà Tĩnh</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/H%C3%A0_T%C4%A9nh_Stadium.jpg/150px-H%C3%A0_T%C4%A9nh_Stadium.jpg"
+                            alt=" #" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_H%C3%A0_T%C4%A9nh">Sân
+                            vận động Hà Tĩnh</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/Logo_CAHN_FC.svg.png" alt=" #">
+                        <a href="./teams/cahn.html">Công An Hà Nội</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hang_Day.jpg/150px-Hang_Day.jpg"
+                            alt=" #" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_H%C3%A0ng_%C4%90%E1%BA%ABy">Sân
+                            vận động Hàng Đẫy</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/Logo-clb-Khatoco-Khanh-Hoa.png" alt=" #">
+                        <a href="./teams/kkh.html">Khatoco Khánh Hòa</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/August_19th_Stadium.jpg/150px-August_19th_Stadium.jpg"
+                            alt=" #" width="50">
+                        <a href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Nha_Trang">Sân vận
+                            động 19 tháng 8</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/SHB_Danang_logo.svg.png" alt=" #">
+                        <a href="./teams/shbdn.html">SHB Đà Nẵng</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/S%C3%A2n_V%E1%BA%ADn_%C4%90%E1%BB%99ng_H%C3%B2a_Xu%C3%A2n.jpg/150px-S%C3%A2n_V%E1%BA%ADn_%C4%90%E1%BB%99ng_H%C3%B2a_Xu%C3%A2n.jpg"
+                            alt=" #" width="50">
+                        <a
+                            href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_H%C3%B2a_Xu%C3%A2n">Sân
+                            vận động Hòa Xuân</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/SLNA_FC_logo.svg.png" alt=" #">
+                        <a href="./teams/slna.html">Sông Lam Nghệ An</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vinh_Stadium_2022.jpg/150px-Vinh_Stadium_2022.jpg"
+                            alt=" #" width="50">
+                        <a href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Vinh">Sân vận động
+                            Vinh</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/Binh_Dinh_FC_logo.svg.png" alt=" #">
+                        <a href="./teams/tbđ.html">MeryLand Bình Định</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Quy_Nhon_Stadium.jpg/150px-Quy_Nhon_Stadium.jpg"
+                            alt=" #" width="50">
+                        <a href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Quy_Nh%C6%A1n">Sân
+                            vận động Quy Nhơn</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clubss">
+                        <img src="./anhlogo/Hoàng_Anh_Gia_Lai_FC.png" alt=" #">
+                        <a href="./teams/hagl.html">Hoàng Anh Gia Lai</a>
+                    </td>
+                    <td class="clubss">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Pleiku_stadium.jpg/150px-Pleiku_stadium.jpg"
+                            alt=" #" width="50">
+                        <a href="https://vi.wikipedia.org/wiki/S%C3%A2n_v%E1%BA%ADn_%C4%91%E1%BB%99ng_Pleiku">Sân vận
+                            động Pleiku</a>
+                    </td>
+                </tr>
+                <!-- Add more clubs and stadiums as necessary -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <div class="footer">
+            <!-- thanh logo -->
+            <div class="ft-hea">
+                <div class="ft-hea-logo">
+                    <a href="../Vanh-trangChu/v_league.html">
+                        <img src="./footer_item/footer-hea.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- thong tin -->
+            <div class="ft-thong-tin">
+                <!-- 1 -->
+                <div class="ft-tt-item">
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="./footer_item/donvichuquan.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>ĐƠN VỊ CHỦ QUẢN</p>
+                            <p>công ty cổ phần bóng đá chuyên nghiệp Việt Nam (UTC)</p>
+                        </div>
+                    </div>
+
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="./footer_item/diachi.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>ĐỊA CHỈ</p>
+                            <p>Số 3, Đường Cầu Giấy, Đống Đa, TP. Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="ft-tt-item">
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="./footer_item/giayphep.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>GIẤY PHÉP</p>
+                            <p>Giấy phép số 4593/GP-TTĐT do sở TT&TT Hà Nội cấp ngày 31/10/2017</p>
+                        </div>
+                    </div>
+
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="./footer_item/chiutrachnhiem.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>CHỊU TRÁCH NHIỆM NỘI DUNG</p>
+                            <p>Trần Văn Trình (thành viên nhóm 18 - nhiệm vụ làm Đội bóng-Cầu thủ)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="ft-tt-item">
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="./footer_item/lienlac.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>LIÊN LẠC</p>
+                            <p>0353703997 - FAX: 19012005</p>
+                        </div>
+                    </div>
+
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="./footer_item/caclink.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text list-link">
+                            <a href="../Vanh-trangChu/v_league.html">www.vleague.com</a>
+                            <a href="../Vanh-trangChu/v_league.html">www.utcit164.vn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bottom -->
+            <div class="ft-bottom">
+                <div class="ft-bt-text">
+                    © 2018 VIETNAM PROFESSIONAL FOOTBALL ALL RIGHTS RESERVED
+                </div>
+                <img src="./footer_item/vpf.jpg" alt="">
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://app.tudongchat.com/js/chatbox.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Khởi tạo lại chatbot mỗi khi trang tải lại
+                const tudong_chatbox = new TuDongChat('PeGQca1Yv-HVWAomzfLyS');
+                tudong_chatbox.initial();
+            });
+        </script>
+</body>
+</html>

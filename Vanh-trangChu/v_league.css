@@ -1,0 +1,54 @@
+body{
+    font-family: arial, sans-serif
+}
+
+/* CSS content */
+
+.banner-vanh{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bn-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(50%)
+}
+.banner-vanh_nut{
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+}
+
+
+.mau-chu {
+    color: white;
+    background: rgba(58, 158, 19, 0.964);
+    border-radius: 30px;
+}
+.thong-so {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    transition: all 300ms ease;
+}
+
+.mau-chu:hover {
+    color: rgba(58, 158, 19, 0.964);
+    background: white;
+    text-decoration: none;
+    
+}
+

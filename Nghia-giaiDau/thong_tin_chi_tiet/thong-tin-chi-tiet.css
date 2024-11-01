@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Main content styles */
+.main {
+    padding: 2rem 0;
+}
+
+.match-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.match-header h1 {
+    color: rgb(218, 49, 44);
+    margin-bottom: 0.5rem;
+}
+
+.match-date {
+    color: #666;
+}
+
+/* Match card styles */
+.match-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.team {
+    text-align: center;
+    flex: 1;
+}
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.team-name {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.match-info {
+    flex: 1;
+    text-align: center;
+}
+
+.score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(218, 49, 44);
+    margin-bottom: 0.5rem;
+}
+
+.score-divider {
+    margin: 0 1rem;
+}
+
+.match-status {
+    color: #666;
+    font-weight: 500;
+}
+
+/* Tab styles */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+    padding: 1rem 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    position: relative;
+}
+
+.tab.active {
+    color: rgb(218, 49, 44);
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(218, 49, 44);
+}
+
+/* Tab content styles */
+.content-section {
+    display: none;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Stats styles */
+.stats-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    margin-bottom: 1.5rem;
+}
+
+.stat-bar {
+    display: flex;
+    height: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+}
+
+.bar.home {
+    background-color: rgb(218, 49, 44);
+}
+
+.bar.away {
+    background-color: #c5cae9;
+}
+
+.stat-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+/* Lineup styles */
+.lineup-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.team-lineup {
+    flex: 1;
+}
+
+.players-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.players-table th,
+.players-table td {
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.players-table th {
+    background-color: #f5f5f5;
+    color: rgb(218, 49, 44);
+}
+
+.players-table td {
+    color: #666;
+}
+.lineup-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(218, 49, 44);
+    margin-bottom: 1rem;
+}
+
+.arrow {
+    font-size: 20px; /* Kích thước mũi tên */
+    font-weight: bold;
+
+}
+.down-arrow {
+    color: red; /* Mũi tên xuống màu đỏ */
+}
+.up-arrow {
+    color: rgb(10, 245, 10); /* Mũi tên lên màu xanh */
+}
+
+/* H2H styles */
+.h2h-matches {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.h2h-match {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.match-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.match-result .score {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(218, 49, 44);
+}
+
+/* Match info details styles */
+.match-info-details {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.label {
+    font-weight: 500;
+    color: #666;
+}
+
+.value {
+    color: #1a237e;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #1a237e;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .match-card {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .lineup-container {
+        flex-direction: column;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 1rem;
+    }
+}

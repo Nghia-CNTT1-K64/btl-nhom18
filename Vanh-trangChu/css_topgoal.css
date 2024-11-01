@@ -1,0 +1,91 @@
+.top-goal{
+    background-color: #151d2d;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 3px;
+    padding-bottom: 40px;
+}
+.tg-hea{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+
+}
+.tg-hea h1{
+    border-bottom: 5px solid rgb(218, 49, 44);
+    color: white;
+}
+
+/* css item */
+.tg-ct-item{
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 40px;
+}
+
+.thong-ke{
+    background-color: rgb(218, 49, 44);
+    display: flex;
+    height: 50px;
+    position: relative;
+}
+.thong-tin{
+    background-color: rgb(249, 246, 246);
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.img-cauthu img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    border: 2px solid #fff;
+}
+.so-lieu{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.thong-tin .ho-ten a{
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+}
+.thong-tin .doi .ten-doi{
+    font-size: 14px;
+    font-weight: 600;
+}
+.thong-tin .doi .lg-doi .nen-anh{
+    width: 42px;
+}
+.thong-tin .doi .lg-doi img{
+    width: 40px;
+}
+
+.top-goal{
+    margin: 40px;
+}
+
+/* css quảng cáo */
+.quang-cao{
+    width: 80%;
+    margin: 0 auto;
+}
+.quang-cao a img{
+    width: 100%;
+}
+
+

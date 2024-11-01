@@ -1,0 +1,160 @@
+/* Keep existing CSS styles from lichThiDau.css */
+#lich-thi-dau .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.103);
+}
+#lich-thi-dau .lichThiDau h1{
+    margin-left: 165px;
+}
+
+
+.filters {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.search-filters{
+    align-self: flex-end;
+}
+
+.months {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.month-link {
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.month-link:hover,
+.month-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+.vong-dau {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.vong-dau h1 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    background-color: red;
+}
+
+/* Table styles */
+.match-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.match-table th,
+.match-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.match-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Team logos */
+.team-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Score and popup styles */
+.score {
+    position: relative;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.match-info-popup {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
+
+.score:hover .match-info-popup {
+    display: block;
+}
+
+.match-info-content {
+    display: flex;
+    gap: 20px;
+}
+
+.team-stats {
+    flex: 1;
+}
+
+.stat-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.home-team, .away-team {
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.home-team:hover, .away-team:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .match-table {
+        font-size: 14px;
+    }
+    
+    .months {
+        gap: 5px;
+    }
+    
+    .month-link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+.match-table {
+    transition: all 0.3s ease;
+}

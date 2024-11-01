@@ -1,0 +1,176 @@
+
+.tin-tuc{
+    box-sizing: border-box;
+}
+
+.tieu-de{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 20px;
+    height: 38px;
+    margin-bottom: 20px;
+}
+.bt-xemthem{
+   
+    display: flex;
+    background-color: rgb(218, 49, 44);
+    max-width: 75px;
+    width: 75px;
+    height: 38px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.bt-xemthem a{
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+.td-h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 38px;
+}
+
+
+.td-h2 h2{
+    height: 38px;
+    color: rgb(218, 49, 44);
+    font-size: 30px;
+}
+
+.bt-xemthem:hover {
+    background-color: rgb(131, 31, 27);
+}
+
+/* content 0*/
+.tt-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa nội dung nếu cần */
+    align-items: center;
+    margin: 20px 0;
+}
+
+.tt-ct-child{
+    background-color: #f8f8f9;
+}
+
+.tt-ct-0 {
+    display: flex;               /* Đặt các phần tử con (ảnh và nội dung) theo hàng ngang */
+    flex-direction: row;         /* Đảm bảo các phần tử con nằm ngang */
+    width: 100%;                 /* Chiếm 100% chiều rộng của container */
+    max-width: 1200px;           /* Giới hạn kích thước tối đa nếu cần */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.anh0 {
+    flex: 7;                     /* Ảnh chiếm 70% không gian */
+    max-width: 70%;              /* Giới hạn chiều rộng tối đa cho ảnh */
+    height: auto;                /* Chiều cao tự động theo kích thước của ảnh */
+}
+
+.anh0 img {
+    width: 100%;                 /* Ảnh chiếm toàn bộ chiều rộng của phần tử chứa */
+    height: 100%;                /* Ảnh chiếm toàn bộ chiều cao của phần tử chứa */
+    object-fit: cover;           /* Ảnh được điều chỉnh để không bị méo và vẫn phủ kín */
+}
+
+.tt-ct-0-item {
+    flex: 3;                     /* Nội dung chiếm 30% không gian */
+    padding: 30px;          /* Khoảng cách giữa ảnh và nội dung */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.item-0-header {
+    font-size: 22px;            /* Kích thước tiêu đề */
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    position: relative; /* Để dùng ::before cho đường kẻ */
+    padding-top: 10px; /* Tạo khoảng cách giữa đường kẻ và chữ */
+}
+
+.item-0-header:hover {
+    text-decoration: none;
+    color: rgb(218, 49, 44);
+}
+
+/*đường kẻ đỏ */
+.item-0-header::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Đặt đường kẻ ở trên cùng */
+    left: 0; /* Đặt từ đầu phần tử */
+    width: 60px; /* Độ dài đường kẻ bằng 1/3 chiều dài của tiêu đề */
+    height: 1px; /* Độ dày của đường kẻ */
+    background-color: red; /* Màu của đường kẻ */
+}
+
+.item-0-ct {
+    font-size: 14px;              /* Kích thước nội dung */
+    color: black;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+/* Phần cho 3 bài báo nhỏ ở dưới */
+.tt-content-123 {
+    display: flex;               /* Sử dụng Flexbox để các bài báo nhỏ nằm ngang */
+    justify-content: space-between; /* Giãn đều khoảng cách giữa các bài tin */
+    width: 100%;                 /* Chiếm toàn bộ chiều rộng của container */
+    max-width: 1200px;           /* Giới hạn chiều rộng tương tự bài báo 0 */
+    gap: 20px;                   /* Khoảng cách giữa các bài báo nhỏ */
+
+    margin-top: 20px;
+}
+
+/* Định dạng cho từng bài báo nhỏ */
+.tt-ct-123 {
+    flex: 1;                     /* Chia đều không gian giữa các bài báo nhỏ */
+    background-color: #f8f8f9;   /* Màu nền cho mỗi bài báo */
+    display: flex;
+    flex-direction: column;      /* Nội dung bên trong xếp theo chiều dọc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Định dạng ảnh cho các bài báo nhỏ */
+.tt-ct-123 img {
+    width: 100%;                 /* Ảnh chiếm toàn bộ chiều rộng của container */
+    height: 180px;                /* Đặt chiều cao cố định cho ảnh */
+    object-fit: cover;           /* Ảnh được cắt để không bị méo */
+    margin-bottom: 10px;         /* Khoảng cách dưới ảnh */
+}
+
+/* Định dạng phần tiêu đề của bài báo nhỏ */
+.tt-ct-123-item .item-123-header {
+    font-size: 16px;             /* Kích thước tiêu đề */
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+
+    min-height: 80px;
+    line-height: 1.2;
+}
+
+/* Hover cho tiêu đề bài báo nhỏ */
+.tt-ct-123-item .item-123-header:hover {
+    color: rgb(218, 49, 44);     /* Đổi màu tiêu đề khi hover */
+}
+
+/* Định dạng phần nội dung mô tả cho bài báo nhỏ */
+.tt-ct-123-item .item-123-ct {
+    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+}
+

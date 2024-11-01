@@ -1,0 +1,572 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="V_league 2023/24">
+    <meta name="keywords" content="Bảng xếp hạng v_league 2023/24.">
+    <meta name="author" content="Phạm Duy Hiển">
+        <title>Football Table</title>
+        <link rel="icon" href="../Vanh-trangChu/logo/logo_vuong.png" type="image/png">
+        <link rel="stylesheet" href="Webbongda.css">
+    </head>
+    <body>
+        <div class="boc">
+            <div class="header_boc">
+                <nav class="hop_dung">
+                    <a href="../Vanh-trangChu/v_league.html" id="logo" >
+                        <img src="./anh/logo.png" alt="">
+                    </a>
+                    <ul class="main-menu">
+                        <li><a href="../Vanh-trangChu/v_league.html">Trang chủ</a></li>
+                        <li><a href="../Nghia-giaiDau/giaiDau.html">Thông tin giải đấu</a>
+                        </li>
+                        <li><a href="../Hien-bangXepHang/Webbongda.html">Bảng xếp hạng</a>
+                        </li>
+                        <li><a href="../Trinh-doiBong/qlvl.html">Quản lí đội bóng</a>
+                        </li>
+                        <li><a href="../Dung-TinTuc/muctintuc/baitaplon.html">Tin tức</a></li>
+                    </ul>
+                    <ul class="login">
+                        <li id="dangnhap"><a href="../../Hien-bangXepHang/dangnhap.html">Đăng nhập</a></li>
+                        <li id="muave"><a href="../../Hien-bangXepHang/vesan.html">Mua vé</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Thứ Tự</th>
+                            <th onclick="sortTable(1)">Đội Bóng</th>
+                            <th onclick="sortTable(2)">Số Trận</th>
+                            <th onclick="sortTable(3)">Thắng</th>
+                            <th onclick="sortTable(4)">Hòa</th>
+                            <th onclick="sortTable(5)">Thua</th>
+                            <th onclick="sortTable(6)">Bàn Thắng</th>
+                            <th onclick="sortTable(7)">Bàn Thua</th>
+                            <th onclick="sortTable(8)">Hiệu Số</th>
+                            <th onclick="sortTable(9)">Điểm</th>
+                            <th>Lịch Sử</th>
+                            <th>More</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="../Trinh-doiBong/teams/đath.html">Thanh Hóa</a></td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td>4</td>
+                            <td>+5</td>
+                            <td>9</td>
+                            <td><span class="history">W W L</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Thanh Hóa"
+                                        data-logo="anh/TH.png"
+                                        data-latest-result="2023-9-15,anh/TH.png,1,2,anh/HAGL.png"
+                                        data-next-fixture="2023-10-4,anh/TH.png,18:00,anh/Bình ĐỊnh.png"
+                                        data-position-data="2,2,1,1,2,1">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="../Trinh-doiBong/teams/hagl.html">HAGL</a></td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>+6</td>
+                            <td>8</td>
+                            <td><span class="history">D W W</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="HAGL"
+                                        data-logo="anh/HAGL.png"
+                                        data-latest-result="2023-19-15,anh/HAGL.png,3,0,anh/Becamex.png"
+                                        data-next-fixture="2023-10-3,anh/HAGL.png,8 :00,anh/SHB.png"
+                                        data-position-data="4,3,2,2,1,2">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="../Trinh-doiBong/teams/hlht.html">Hồng Lĩnh Hà Tĩnh</a></td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td>2</td>
+                            <td>+3</td>
+                            <td>7</td>
+                            <td><span class="history">D W W</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Hồng Lĩnh Hà Tĩnh"
+                                        data-logo="anh/Hồng Lĩnh.png"
+                                        data-latest-result="2023-10-15,anh/Hồng Lĩnh.png,4,1,anh/TH.png"
+                                        data-next-fixture="2023-10-3,anh/Hồng Lĩnh.png,22:15,anh/Quang Nam.png"
+                                        data-position-data="4,3,2,2,1,3">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="">Becamex Bình Dương</a></td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td>+3</td>
+                            <td>7</td>
+                            <td><span class="history">L D W</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Becamex Bình Dương"
+                                        data-logo="anh/Becamex.png"
+                                        data-latest-result="2023-09-15,anh/Becamex.png,3,2,anh/NAm Dinh.png"
+                                        data-next-fixture="2023-10-23,anh/Becamex.png,17:30,anh/HCM.png"
+                                        data-position-data="2,3,4,2,2,2">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="">Nam Định</a></td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td>+3</td>
+                            <td>7</td>
+                            <td><span class="history">D W L</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Nam Định"
+                                        data-logo="anh/NAm Dinh.png"
+                                        data-latest-result="2023-09-15,anh/NAm Dinh.png,2,3,anh/Becamex.png"
+                                        data-next-fixture="2023-10-19,anh/NAm Dinh.png,9:00,anh/SLNA.png"
+                                        data-position-data="4,4,3,3,2,3">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="">Hà Nội</a></td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>+2</td>
+                            <td>7</td>
+                            <td><span class="history">W L W</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Hà Nội"
+                                        data-logo="anh/HaNoi.png"
+                                        data-latest-result="2023-10-15,anh/HaNoi.png,1,1,anh/HAGL.png"
+                                        data-next-fixture="2023-10-23,anh/HaNoi.png,17:00,anh/SHB.png"
+                                        data-position-data="2,2,1,1,2,2">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="">Viettel</a></td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>+1</td>
+                            <td>7</td>
+                            <td><span class="history">L W D</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Viettel"
+                                        data-logo="anh/Viettel.png"
+                                        data-latest-result="2023-10-3,anh/Viettel.png,4,1,anh/HAGL.png"
+                                        data-next-fixture="2023-10-23,anh/Viettel.png,20:00,anh/SHB.png"
+                                        data-position-data="2,2,3,1,3,2">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="">Công An Hà Nội</a></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>+0</td>
+                            <td>5</td>
+                            <td><span class="history">W L D</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Công An Hà Nội"
+                                        data-logo="anh/Cong An Ha Noi.png"
+                                        data-latest-result="2023-08-15,anh/Cong An Ha Noi.png,5,4,anh/TH.png"
+                                        data-next-fixture="2023-10-13,anh/Cong An Ha Noi.png,17:00,anh/SLNA.png"
+                                        data-position-data="2,3,2,4,1,2">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="">QNK Quảng Nam</a></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>7</td>
+                            <td>-4</td>
+                            <td>4</td>
+                            <td><span class="history">W L L</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="QNK Quảng Nam"
+                                        data-logo="anh/Quang Nam.png"
+                                        data-latest-result="2023-10-15,anh/Quang Nam.png,3,0,anh/HAGL.png"
+                                        data-next-fixture="2023-10-23,anh/Quang Nam.png,3:00,anh/NAm Dinh.png"
+                                        data-position-data="2,4,2,2,1,3">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><a href="">TP Hồ Chí Minh</a></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>-4</td>
+                            <td>4</td>
+                            <td><span class="history">L W D</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="TP Hồ Chí Minh"
+                                        data-logo="anh/HCM.png"
+                                        data-latest-result="2023-10-15,anh/HCM.png,1,1,anh/HAGL.png"
+                                        data-next-fixture="2023-10-23,anh/HCM.png,5:50,anh/SHB.png"
+                                        data-position-data="2,3,3,4,1,1">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><a href="">Bình Định</a></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>7</td>
+                            <td>-4</td>
+                            <td>3</td>
+                            <td><span class="history">W L L</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Bình Định"
+                                        data-logo="anh/Bình ĐỊnh.png"
+                                        data-latest-result="2023-10-15,anh/Bình ĐỊnh.png,1,2,anh/Becamex.png"
+                                        data-next-fixture="2023-10-23,anh/Bình ĐỊnh.png,6:00,anh/SLNA.png"
+                                        data-position-data="2,2,2,3,1,1">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><a href="">Hải Phòng</a></td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>-3</td>
+                            <td>2</td>
+                            <td><span class="history">L D D</span></td>
+                            <td>
+                                <span class="More">
+                                    <button id="showTableButton" 
+                                        data-team="Hải Phòng"
+                                        data-logo="anh/Hai Phong.png"
+                                        data-latest-result="2023-10-15,anh/Hai Phong.png,1,1,anh/Ha noi.png"
+                                        data-next-fixture="2023-10-23,anh/Hai Phong.png,17:00,anh/SHB.png"
+                                        data-position-data="2,2,1,1,2,2">
+                                        &#9660;
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="side-panel">
+                <div class="match-schedule">
+                    <div class="first-panel">
+                    <img src="anh/logo.png" alt="logo giải đấu">
+                    <h1>Tuần 1</h1>
+                </div>
+                    <h2>03 Thg10, năm 2023</h2>
+                    <ul>
+                        <li><img class="anh-clb" src="anh/Hồng Lĩnh.png"> vs <img src="anh/Quang Nam.png"></li>
+                        <li><img class="anh-clb" src="anh/SHB.png"> vs <img src="anh/HAGL.png"></li>
+                    <h2>04 Thg10, năm 2023</h2>
+                    <ul>
+                        <li><img class="anh-clb" src="anh/Bình ĐỊnh.png"> vs <img src="anh/Thnah Hoa.png"></li>
+                        <li><img class="anh-clb" src="anh/Becamex.png"> vs <img src="anh/HCM.png"></li>
+                        <li><img class="anh-clb" src="anh/Hai Phong.png"> vs <img src="anh/Viettel.png"></li>
+                    <h2>19 Thg10, năm 2023</h2>
+                    <ul>
+                        <li><img class="anh-clb" src="anh/NAm Dinh.png"> vs <img src="anh/SLNA.png"></li>
+                        <li><img class="anh-clb" src="anh/Ha noi.png"> vs <img src="anh/Cong An Ha Noi.png"></li>   
+                    <h2>26 Thg10, năm 2023</h2>
+                    <ul>
+                        <li><img class="anh-clb" src="anh/HAGL.png"> vs <img src="anh/Thnah Hoa.png"></li>
+                        <li><img class="anh-clb" src="anh/HCM.png"> vs <img src="anh/Quang Nam.png"></li>
+                        <li><img class="anh-clb" src="anh/Viettel.png"> vs <img src="anh/Becamex.png"></li>
+                    <h2>27 Thg10, năm 2023</h2>
+                    <ul>
+                    <li><img class="anh-clb" src="anh/Bình ĐỊnh.png"> vs <img src="anh/SLNA.png"></li>
+                    <li><img class="anh-clb" src="anh/SHB.png"> vs <img src="anh/Hai Phong.png"></li>
+                    <li><img class="anh-clb" src="anh/Ha noi.png"> vs <img src="anh/Hồng Lĩnh.png"></li>
+                    <h2>27 Thg10, năm 2023</h2>
+                    <ul>
+                    <li><img class="anh-clb" src="anh/NAm Dinh.png"> vs <img src="anh/Cong An Ha Noi.png    "></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--bang hien sau-->
+        <div id="tableContainer" style="display: none;">
+        <div class="container">
+            <div class="header">
+                <div class="team-info">
+                    <img src="anh/TH.png"  class="logo">
+                    <h1>team 1</h1>
+                </div>
+                <div class="latest">
+                    <div class="latest-result">
+                        <p>Latest Result: Saturday 5 October 2024</p>
+                        <div class="match">
+                            <img src="anh/Ha noi.png" alt="lỗi" class="team-logo">
+                            <span class="score">0 - 1</span>
+                            <img src="anh/SHB.png" alt="lỗi" class="team-logo">
+                        </div>
+                    </div>
+                    <div class="latest-result-2">
+                        <p>Latest Fixture: Sunday 20 October 2024</p>
+                        <div class="fixture"> 
+                            <img src="anh/SLNA.png" alt="lỗi" class="team-logo">
+                            <span class="time">22:30</span>
+                            <img src="anh/Ha noi.png" alt="Lỗi" class="team-logo">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="graph">
+                <h2>Position Over Matchweeks</h2>
+                <div class="graph-container">
+                    <svg height="300" width="600">
+                        <!-- X-axis -->
+                        <line x1="50" y1="250" x2="550" y2="250" stroke="#ccc" />
+                        <!-- Y-axis -->
+                        <line x1="50" y1="50" x2="50" y2="250" stroke="#ccc" />
+
+                        <!-- X-axis labels -->
+                        <text x="50" y="270" font-size="12">Week 1</text>
+                        <text x="150" y="270" font-size="12">Week 2</text>
+                        <text x="250" y="270" font-size="12">Week 3</text>
+                        <text x="350" y="270" font-size="12">Week 4</text>
+                        <text x="450" y="270" font-size="12">Week 5</text>
+                        <text x="550" y="270" font-size="12">Week 6</text>
+
+                        <!-- Y-axis labels (Positions) -->
+                        <text x="30" y="50" font-size="12">1</text>
+                        <text x="30" y="100" font-size="12">2</text>
+                        <text x="30" y="150" font-size="12">3</text>
+                        <text x="30" y="200" font-size="12">4</text>
+                        <text x="30" y="250" font-size="12">5</text>
+
+                        <!-- Data Line (Position over matchweeks) -->
+                        <polyline points="50,50 150,100 250,50 350,150 450,100 550,50"
+                                style="fill:none;stroke:purple;stroke-width:3" />
+
+                        <!-- Data Points (Green for good result, red for bad result) -->
+                        <circle cx="50" cy="50" r="5" fill="green" />
+                        <circle cx="150" cy="100" r="5" fill="green" />
+                        <circle cx="250" cy="50" r="5" fill="green" />
+                        <circle cx="350" cy="150" r="5" fill="red" />
+                        <circle cx="450" cy="100" r="5" fill="green" />
+                        <circle cx="550" cy="50" r="5" fill="white" stroke="black" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <video id="myVideo" autoplay loop muted>
+            <source src="anh/y2meta.com-Trailer đặc biệt của LS V League 1 2021.mp4" type="video/mp4">
+        </video>
+        
+        <div class="footer">
+            <!-- thanh logo -->
+            <div class="ft-hea">
+                <div class="ft-hea-logo">
+                    <a href="../Vanh-trangChu/v_league.html">
+                        <img src="../Vanh-trangChu/logo/logo_ngang.png" alt="">
+                    </a>
+                </div>
+            </div>
+     
+            <!-- thong tin -->
+            <div class="ft-thong-tin">
+                <!-- 1 -->
+                <div class="ft-tt-item">
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="img_footer_item/don_vi_chu_quan.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>ĐƠN VỊ CHỦ QUẢN</p>
+                            <P>công ty cổ phần bóng đá chuyên nghiệp Việt Nam (UTC)</P>
+                        </div>
+                    </div>
+     
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="img_footer_item/dia_chi.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>ĐỊA CHỈ</p>
+                            <P>Số 3, Đường Cầu Giấy, Đống Đa, TP. Hà Nội</P>
+                        </div>
+                    </div>
+                </div>
+     
+                <!-- 2 -->
+                <div class="ft-tt-item">
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="img_footer_item/giay_phep.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>GIẤY PHÉP</p>
+                            <P>Giấy phép số 4593/GP-TTĐT do sở TT&TT Hà Nội cấp ngày 31/10/2017</P>
+                        </div>
+                    </div>
+     
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="img_footer_item/chiu_trach_nhiem_nd.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>CHỊU TRÁCH NHIỆM NỘI DUNG</p>
+                            <P>Phạm Duy Hiển(thành viên nhóm 18 - nhiệm vụ làm Bảng Xếp Hạng)</P>
+                        </div>
+                    </div>
+                </div>
+     
+                <!-- 3 -->
+                <div class="ft-tt-item">
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="img_footer_item/lien_lac.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text">
+                            <p>LIÊN LẠC</p>
+                            <P>0353703997 - FAX: 19012005</P>
+                        </div>
+                    </div>
+     
+                    <div class="ft-tt-item-1">
+                        <div class="ft-tt-item-img">
+                            <img src="img_footer_item/cac_link.png" alt="">
+                        </div>
+                        <div class="ft-tt-item-text list-link">
+                            <a href="../Vanh-trangChu/v_league.html">www.vleague.com</a>
+                            <a href="../Vanh-trangChu/v_league.html">www.utcit164.vn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+            <!-- bottom -->
+            <div class="ft-bottom">
+                <div class="ft-bt-text">
+                    © 2018 VIETNAM PROFESSIONAL FOOTBALL ALL RIGHTS RESERVED
+                </div>
+                <img src="img_footer_item/vpf.jpg" alt="">
+            </div>
+        </div>
+        <script src="webbongda.js"></script>
+        <script src="https://app.tudongchat.com/js/chatbox.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Khởi tạo lại chatbot mỗi khi trang tải lại
+                const tudong_chatbox = new TuDongChat('PeGQca1Yv-HVWAomzfLyS');
+                tudong_chatbox.initial();
+            });
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,138 @@
+.thongTinChung{
+    /* padding-left: 60px; */
+    word-spacing: 2px;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-left: 140px;
+    margin-right: 95px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1{
+    font-size: 55px;
+}
+
+/* Ẩn các thẻ <ul> con */
+.menu-thongTinChung{
+    margin-bottom: 100px;
+    list-style-type: none;
+    position: relative;
+    /* để các phần tử bên trongcó thể sử dụng position absolute */
+}
+section>ul.menu-thongTinChung>li{
+    width: 50%;
+}
+
+ul.sub-menu-item {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px; 
+    padding-right: 20px;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    box-shadow: 0px 4px 6px;
+
+}
+
+/* Hiển thị submenu khi người dùng hover vào thẻ <li> cha */
+li:hover > ul.sub-menu-item {
+    display: block;
+}
+
+/* Định dạng cho các mục trong submenu */
+.sub-menu-item li {
+    margin: 5px 0; /* Khoảng cách giữa các mục */
+}
+
+/* Thêm màu sắc hoặc hiệu ứng khi hover */
+li:hover > a, .sub-menu-item li:hover > a {
+    color: #db3434; /* Màu khi hover */
+}
+
+/* mo-ta */
+.thongTinChung1{
+    display: grid;
+    grid-template-columns: 60% 30%;
+    grid-gap: 80px;
+    color: #fff;
+    margin-top: 50px;
+    
+}
+.thongTinChung1 h2{
+    color:#FFA600;
+    width: 195px;
+    padding-left: 10px;   
+    border-bottom: solid 2px #ffffff;
+}
+
+section#mo-ta,#the-thuc{
+    background-color: #B31B29;
+    border: solid 4px #B31B29;
+    border-radius: 8px;
+}
+
+.img img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.thongTinChung1 ol li{
+    margin-bottom: 10px;
+}
+
+.thongTinChung2{
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap: 80px;
+    margin-top: 50px;
+
+}
+#the-thuc{
+    grid-column: 1;
+    color: #ffffff;
+}
+.right-section{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    
+}
+#thoi-gian,#dia-diem{
+    margin-bottom: 30px;
+}
+#thoi-gian{
+    display: flex;
+    align-items: flex-start;
+}
+#thoi-gian img{
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+#thoi-gian.content{
+    display: flex;
+    flex-direction: column
+
+}
+#thoi-gian h2, #thoi-gian p{
+    margin: 0;
+}
+#the-thuc h2{
+    color:#FFA600;
+    width: 205px;
+    padding-left: 10px;   
+    border-bottom: solid 2px #ffffff;
+}
+section#thoi-gian,section#dia-diem{
+    background-color: #FFE602;
+    border: solid 4px #FFE602;
+    border-radius: 8px;
+}
+
+
+
+

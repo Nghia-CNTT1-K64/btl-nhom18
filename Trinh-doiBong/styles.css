@@ -1,0 +1,440 @@
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, sans-serif;
+    }
+
+    .boc{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    
+    div.boc{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .header_boc{
+        background-color: rgb(218, 49, 44);
+        border-bottom: 2px solid rgba(186, 174, 8, 0.982);
+    }
+    .hop_dung{
+        margin: 0 auto;
+        max-width: 960px;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+    }
+    
+    #logo img{
+        max-width: 85px;
+        height: auto;
+    }
+    #logo{
+        padding: 4.5px 0px;
+    }
+    
+    .main-menu{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .main-menu li {
+        position: relative;
+        /* height: 60px; */
+    }
+    
+    .main-menu li a{
+        color: white;
+        text-decoration: none;
+        padding: 18px 20px;
+        display: block;
+       
+        text-align: center;
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+        font-size: 15px;
+        
+    }
+    
+    .main-menu ul.sub-menu {
+        position: absolute;
+        background-color: rgb(218, 49, 44);
+        padding: 15px 0px;
+        list-style: none;
+        width: 150px;
+        border: 1px solid rgba(186, 174, 8, 0.982);
+        display: none;
+    }
+    
+    .main-menu li:hover>ul.sub-menu {
+        display: block;
+    }
+    
+    .main-menu ul.sub-menu a{
+        padding: 8px 15px;
+        border-bottom: 1px solid white;
+    }
+    .main-menu ul.sub-menu li:hover a {
+        border-bottom: 1px solid rgba(186, 174, 8, 0.982);
+        color: rgba(186, 174, 8, 0.982);
+    }
+    
+    .main-menu ul.sub-menu li:last-child a {
+        border: none;
+    }
+    
+    /*thiết lập border khi hover */
+    .main-menu>li>a{
+        position: relative;
+    }
+    .main-menu>li:hover>a{
+        color: rgba(186, 174, 8, 0.982);
+    }
+    
+    .main-menu>li>a::before {
+        content: "";
+        height: 4px;
+        width: 0px;
+        background: rgba(186, 174, 8, 0.982);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+        
+       
+    }
+    .main-menu>li:hover>a::before {
+        width: 100%;
+        
+    } 
+    .main-menu>li:nth-child(4)>a{
+        color: rgba(186, 174, 8, 0.982);
+        
+    }
+    
+    /* boder bottom header */
+    header{
+        border-bottom: 5px solid rgba(186, 174, 8, 0.982);
+    }
+    
+    /* login */
+    
+    .login{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .login li a{
+        color: white;
+       
+        padding: 18px 20px;
+        text-align: center;
+        box-sizing: border-box;
+        
+        height: 40px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: Roboto, sans-serif;
+        background-color: rgba(186, 174, 8, 0.982);
+        border-radius: 22rem;
+        transition: all 300ms ease;
+    }
+    
+    .login li { 
+        margin: 5px;
+    }
+    
+    .login li:hover a{
+        background-color: white;
+        color: rgba(186, 174, 8, 0.982);
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        /* Thêm khoảng cách dưới tiêu đề */
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        width: 50px;
+        z-index: 1001;
+        /* Ensures it appears above other elements with lower z-index values */
+        transition: width 0.3s ease;
+        overflow: hidden;
+        background-color: rgb(218, 49, 44);
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .search:hover,
+    .search:focus-within {
+        width: 200px;
+        /* Expanded width */
+    }
+
+    .search input {
+        padding: 10px 25px 10px 25px;
+        width: 80%;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .search:hover input,
+    .search:focus-within input {
+        opacity: 1;
+    }
+
+    .search input:focus {
+        outline: none;
+        border: 1px solid rgb(218, 49, 44);
+        /* Optional border for focused state */
+    }
+
+    .search-icon {
+        margin-left: 15px;
+        /* Adjusted for better alignment */
+        color: black;
+        /* Slightly darker icon color */
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .clubs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        /* Tăng kích thước minmax để có không gian */
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .club {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        /* Giảm padding một chút */
+        text-align: center;
+        font-weight: bold;
+        transition: transform 0.2s;
+        /* Hiệu ứng khi di chuột qua */
+    }
+
+    .club:hover {
+        transform: scale(1.05);
+        /* Phóng to khi di chuột qua */
+    }
+
+    .club img {
+        width: 50px;
+        /* Kích thước logo */
+        height: auto;
+        margin-bottom: 10px;
+        /* Khoảng cách giữa logo và tên đội bóng */
+    }
+
+    .ft-thong-tin {
+        background-color: #151d2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .ft-thong-tin p {
+        color: white;
+        font-size: 14px;
+        margin: 0 0 10px;
+    }
+
+    .ft-tt-item {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .ft-tt-item-text {
+        max-height: 60px;
+        padding: 0;
+    }
+
+    .ft-tt-item-1 {
+        display: flex;
+        gap: 10px;
+    }
+
+    .ft-tt-item-1 {
+        margin: 25px 0;
+    }
+
+    .list-link {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .list-link a {
+        color: #81d4fa;
+        text-decoration: none;
+    }
+
+    .list-link a:hover {
+        text-decoration: none;
+        color: #81d4fa;
+    }
+
+    /* css ft-hea */
+    .ft-hea {
+        background-color: rgb(218, 49, 44);
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .ft-hea .ft-hea-logo a img {
+        width: 5%;
+        height: auto;
+    }
+
+    /* css ft-bottom */
+    .ft-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ft-bottom .ft-bt-text {
+        font-size: 12px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    table th,table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    table img {
+        width: 30px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    table a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    table a:hover {
+        text-decoration: underline;
+    }
+
+    main div a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    main div a:hover {
+        text-decoration-line: underline;
+    }
+
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #000;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        opacity: 0.7;
+    }
+    #scrollToTopBtn:hover {
+        opacity: 1;
+    }
+    #searchResults {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 300px;
+        /* Độ rộng cố định */
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 1001;
+    }
+    .player-result {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        width: 100%;
+        /* Đảm bảo mỗi kết quả đều chiếm toàn bộ chiều rộng */
+        box-sizing: border-box;
+        border-bottom: 1px solid #ddd;
+        white-space: nowrap;
+        /* Ngăn nội dung xuống dòng */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* Hiển thị dấu "..." nếu nội dung quá dài */
+    }
+    .player-result:hover {
+        background-color: #f4f4f4;
+    }
+    .player-details {
+        flex-grow: 1;
+        /* Cho phép phần thông tin cầu thủ mở rộng đầy đủ */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* Hiển thị dấu "..." nếu nội dung quá dài */
+    }
+    .player-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .tudongchat-icon {
+        bottom: 200px !important; /* Dời nút lên 60px */
+        right: 5px !important; /* Vị trí cách mép phải */
+        
+    }

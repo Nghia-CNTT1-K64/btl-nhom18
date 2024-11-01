@@ -1,0 +1,16 @@
+.hop3 {
+    display: flex; /* Sử dụng Flexbox để xếp hàng */
+    margin-top: 20px;
+    
+}
+
+.tin-tuc_wrapper {
+    width: 70%; /* Chiều rộng cho phần tin tức */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm ảnh hưởng đến width */
+}
+
+.bxh_wrapper {
+    width: 30%; /* Chiều rộng cho phần bảng xếp hạng */
+    box-sizing: border-box; /* Tương tự như trên */
+}
+

@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.stadium-map {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 0.25px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.seat {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.seat.available {
+    background-color: #81c784;
+    color: white;
+}
+.seat.unavailable {
+    background-color: #e57373;
+    color: white;
+    cursor: not-allowed;
+}
+.seat.selected {
+    background-color: #64b5f6;
+    color: white;
+}
+.field {
+    grid-column: 4 / 10 ;
+    grid-row: 4 /6;
+    background-color: #d9ff00;
+    border: 2px solid white;
+}
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.legend-color.available {
+    background-color: #81c784;
+}
+.legend-color.unavailable {
+    background-color: #e57373;
+}
+.legend-color.selected {
+    background-color: #64b5f6;
+}
+.stand-label {
+    grid-column: span 3;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    
+}
+#bookingList {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+#bookingList h3 {
+    margin-bottom: 10px;
+}
+#bookingList ul {
+    list-style-type: none;
+    padding: 0;
+}
+#bookingList li {
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+.full-width-divider {
+    grid-column: 1 / -1; /* This makes the divider span the full width of the grid */
+    border-top: 2px solid #ccc;
+    margin: 10px 0;
+    height: 0;
+}

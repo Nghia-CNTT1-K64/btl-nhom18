@@ -1,0 +1,55 @@
+.tenGiaiDau{
+    font-family:Arial, Helvetica, sans-serif;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 25px;
+    color: #FFA600;
+    margin-bottom: 100px;
+    background: linear-gradient(to left, #B31B29 90%, #004E30 10%);
+}
+.trai{
+    margin-right: 20px;
+    height: 95px;
+    margin-left: 100px;
+    
+}
+.trai img{
+    height: 100%;
+    width: auto;
+}
+.gachNoi{
+    background-color: #FFA600;
+    width: 20px;
+    height: 3px;
+    margin: 0 90px;
+}
+.giua{
+    /* flex: 1; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    
+}
+.phai{
+    margin-left: 30px;
+    text-align: center;
+}
+
+@media (max-width:1200px){
+    .trai {
+        margin-left: 40px;
+    }
+}
+
+/* botchat */
+/* Điều chỉnh vị trí nút chatbot */
+.tudongchat-icon {
+    bottom: 300px !important; /* Dời nút lên 60px */
+    right: 5px !important; /* Vị trí cách mép phải */
+    
+}
+
+   

@@ -1,0 +1,31 @@
+body{
+    font-family: arial, sans-serif;
+}
+
+/* Định dạng nội dung bài viết */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.container img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}

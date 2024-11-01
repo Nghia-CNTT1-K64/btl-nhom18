@@ -1,0 +1,396 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: arial, sans-serif;
+}
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper2{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header_wrap{
+    background-color: rgb(218, 49, 44);
+    border-bottom: 2px solid rgba(186, 174, 8, 0.982);
+}
+.container{
+    margin: 0 auto;
+    max-width: 960px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#logo img{
+    max-width: 85px;
+    height: auto;
+}
+#logo{
+    padding: 4.5px 0px;
+}
+
+.main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.main-menu li {
+    position: relative;
+    /* height: 60px; */
+}
+
+.main-menu li a{
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+    display: block;
+   
+    text-align: center;
+    box-sizing: border-box;
+    
+    font-size: 15px;
+    
+}
+
+.main-menu ul.sub-menu {
+    position: absolute;
+    background-color: rgb(218, 49, 44);
+    padding: 15px 0px;
+    list-style: none;
+    width: 150px;
+    border: 1px solid rgba(186, 174, 8, 0.982);
+    display: none;
+}
+
+.main-menu li:hover>ul.sub-menu {
+    display: block;
+}
+
+.main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid white;
+}
+.main-menu ul.sub-menu li:hover a {
+    border-bottom: 1px solid rgba(186, 174, 8, 0.982);
+    color: rgba(186, 174, 8, 0.982);
+}
+
+.main-menu ul.sub-menu li:last-child a {
+    border: none;
+}
+
+/*thiết lập border khi hover */
+.main-menu>li>a{
+    position: relative;
+}
+.main-menu>li:hover>a{
+    color: rgba(186, 174, 8, 0.982);
+}
+
+.main-menu>li>a::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: rgba(186, 174, 8, 0.982);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+   
+}
+.main-menu>li:hover>a::before {
+    width: 100%;
+    
+} 
+
+/* boder bottom header */
+header{
+    border-bottom: 5px solid rgba(186, 174, 8, 0.982);
+}
+
+/* login */
+
+.login{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login li a{
+    color: white;
+   
+    padding: 18px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgba(186, 174, 8, 0.982);
+    border-radius: 22rem;
+    transition: all 300ms ease;
+}
+
+.login li { 
+    margin: 5px;
+}
+
+.login li:hover a{
+    background-color: white;
+    color: rgba(186, 174, 8, 0.982);
+}
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề */
+h1 img {
+    height: 100px; /* Đặt chiều cao cho logo */
+    vertical-align: middle; /* Căn giữa logo với văn bản */
+    margin-left: 50px; /* Khoảng cách giữa logo và văn bản */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    border-left: 5px solid #4CAF50;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lưới danh sách cầu thủ */
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+}
+
+/* Thẻ cầu thủ */
+.player-card {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.player-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(211, 47, 47, 0.1), rgba(186, 174, 8, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.player-card:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced Player Images */
+.player-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.player-card:hover img {
+    transform: scale(1.1);
+    border-color: #d32f2f;
+}
+
+/* Enhanced Typography */
+.player-card h2 {
+    color: #d32f2f;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 15px 0 10px;
+}
+
+.player-card h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.player-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+/* Section Headers */
+
+
+
+
+.ft-thong-tin{
+    background-color: #151d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.ft-thong-tin p{
+    color: white;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.ft-tt-item{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.ft-tt-item-text{
+    max-height: 60px;
+    padding: 0;
+}
+
+.ft-tt-item-1{
+    display: flex;
+    gap: 10px;
+}
+
+.ft-tt-item-1{
+    margin: 25px 0;
+}
+.list-link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.list-link a{
+    color: #81d4fa;
+    text-decoration: none;
+}
+.list-link a:hover{
+    text-decoration: none;
+    color: #81d4fa;
+}
+
+/* css ft-hea */
+.ft-hea{
+    background-color: rgb(218, 49, 44);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.ft-hea .ft-hea-logo a img{
+    width: 5%;
+    height: auto;
+}
+
+/* css ft-bottom */
+.ft-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ft-bottom .ft-bt-text{
+    font-size: 12px;
+}
+.player-card {
+    animation: fadeIn 0.5s ease forwards;
+}
+a{
+    text-decoration: none;
+}
+/* Căn giữa thanh tìm kiếm */
+.search {
+    display: flex;
+    justify-content: center; /* Đưa thanh tìm kiếm ra giữa */
+    align-items: center;
+    position: relative;
+    margin: 20px auto; /* Tạo khoảng cách phía dưới */
+    width: 100%;
+    max-width: 400px; /* Đặt giới hạn chiều rộng */
+}
+
+/* Giao diện thanh tìm kiếm */
+.search input {
+    padding: 10px 40px 10px 30px; /* Đệm trái cho icon */
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi người dùng tương tác */
+.search input:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.4);
+    outline: none;
+}
+
+/* Icon tìm kiếm */
+.search-icon {
+    position: absolute;
+    left: 10px; /* Vị trí icon bên trong thanh tìm kiếm */
+    color: #aaa;
+    font-size: 18px;
+}
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 1;
+}

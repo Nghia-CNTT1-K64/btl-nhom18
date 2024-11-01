@@ -1,0 +1,130 @@
+.bxh-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bxh{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    
+}
+.bxh .bxh-header{
+    display: flex;
+    gap: 10px;
+    background-color: rgb(218, 49, 44);
+    width: 80%;
+    margin: 0 auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+}
+
+.bxh .bxh-header .noi-dung h2{
+    font-size: 25px;
+}
+.bxh-content{
+    width: 80%;
+    margin: 0 auto; 
+}
+.bxh-content{
+    border: 1px solid rgb(219, 216, 216);
+    padding: 10px;
+    
+}
+.bxh-content .ct-bxh{
+    width: 90%;
+    margin: 0 auto;
+}
+.muc-chinh tr{
+    border-bottom: 3px solid rgb(219, 216, 216);
+    height: 35px;
+}
+.tbody tr{
+    border-bottom: 1px solid rgb(219, 216, 216);
+    height: 35px;
+}
+.tbody tr:last-child{
+    border: none;
+}
+.ten-doi{
+    text-decoration: none;
+    color: black;
+}
+
+.lg-doi:hover{
+    text-decoration: none;
+}
+.lg-doi img{
+    max-width: 40px;
+    width: 25px;
+    border-radius: 4px;
+   
+    
+}
+
+.nen-anh{
+    display: inline-block;
+    background-color: white;
+    max-width: 41px;
+    width: 27px;
+    margin-right: 3px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 2s ease-in-out;
+}
+
+.ct-bxh td:not(:nth-child(2)), .ct-bxh th:not(:nth-child(2)) {
+    text-align: center;
+}
+
+.ct-bxh td:nth-child(1), .ct-bxh th:nth-child(1) {
+    width: 26px;
+}
+
+.ct-bxh td:nth-child(2), .ct-bxh th:nth-child(2) {
+    width: 125px;
+}
+
+.ct-bxh td:nth-child(3), .ct-bxh th:nth-child(3) {
+    width: 40px;
+}
+.ct-bxh td:nth-child(4), .ct-bxh th:nth-child(4) {
+    width: 27px;
+}
+.ct-bxh td:nth-child(5), .ct-bxh th:nth-child(5) {
+    width: 42px;
+}
+
+.tbody tr:hover{
+    background-color: rgb(218, 49, 44);
+    color: white;
+}
+.tbody tr:hover a{
+    color: white;
+}
+
+/* bottom xem chi tiet */
+.bt-them {
+    background-color: #f7f7f7;
+    text-align: center;
+    width: 80%;
+    padding: 7px 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid rgb(219, 216, 216);
+}
+
+.bt-them a {
+    color: black;
+    text-decoration: none;
+}
+
+.bt-them:hover {
+    background-color: rgb(219, 216, 216);
+}
+
+#sort-diem {
+    cursor: pointer;
+}
