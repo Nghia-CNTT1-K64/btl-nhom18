@@ -186,23 +186,24 @@ body{
     tbody tr:hover {
         background-color: #e9e9e9;
     }
-    #scrollToTop {
-        display: none;
+    #scrollToTopBtn {
         position: fixed;
         bottom: 20px;
-        right: 20px;
-        background-color: #f70404;
-        color: rgb(252, 245, 245);
-        padding: 15px;
+        right: 30px;
+        display: none; /* Ẩn nút cho đến khi người dùng cuộn */
+        background-color: #fb0202;
+        color: white;
         border: none;
-        border-radius: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 20px;
         cursor: pointer;
         transition: opacity 0.3s;
         opacity: 0.7;
     }
-
-    #scrollToTop:hover {
-        opacity: 1;
+    
+    #scrollToTopBtn:hover {
+        background-color: #870505;
     }
     .tudongchat-icon {
         bottom: 200px !important; /* Dời nút lên 60px */

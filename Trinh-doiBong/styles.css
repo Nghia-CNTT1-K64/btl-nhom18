@@ -369,21 +369,23 @@
     }
 
     #scrollToTopBtn {
-        display: none;
         position: fixed;
         bottom: 20px;
-        right: 20px;
-        background-color: #000;
+        right: 30px;
+        display: none; /* Ẩn nút cho đến khi người dùng cuộn */
+        background-color: #fb0202;
         color: white;
-        padding: 15px;
         border: none;
-        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 20px;
         cursor: pointer;
         transition: opacity 0.3s;
         opacity: 0.7;
     }
+    
     #scrollToTopBtn:hover {
-        opacity: 1;
+        background-color: #870505;
     }
     #searchResults {
         display: flex;

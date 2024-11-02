@@ -52,3 +52,31 @@ body{
     
 }
 
+/*  */
+.tudongchat-icon {
+    bottom: 200px !important; /* Dời nút lên 60px */
+    right: 0px !important; /* Vị trí cách mép phải */
+    
+}
+
+/*  */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none; /* Ẩn nút cho đến khi người dùng cuộn */
+    background-color: #fb0202;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #870505;
+}
+
