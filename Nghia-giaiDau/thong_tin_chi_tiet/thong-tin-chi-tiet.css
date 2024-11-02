@@ -17,6 +17,8 @@ a{
 /* Main content styles */
 .main {
     padding: 2rem 0;
+    max-width: 800px; /* Giới hạn chiều rộng, ví dụ là 800px */
+    margin: 0 auto; /* Căn giữa .main */
 }
 
 .match-header {
