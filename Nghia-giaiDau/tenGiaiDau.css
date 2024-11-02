@@ -47,8 +47,8 @@
 /* botchat */
 /* Điều chỉnh vị trí nút chatbot */
 .tudongchat-icon {
-    bottom: 300px !important; /* Dời nút lên 60px */
-    right: 5px !important; /* Vị trí cách mép phải */
+    bottom: 200px !important; /* Dời nút lên 60px */
+    right: 0px !important; /* Vị trí cách mép phải */
     
 }
 
