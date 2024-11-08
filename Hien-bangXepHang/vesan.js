@@ -13,46 +13,40 @@ let bookedSeats = JSON.parse(localStorage.getItem('bookedSeats')) || {};
 function createStadiumMap() {
     clearStadiumMap();
 
-    // Khán đài A (Trên)
+    
     addStandLabel('Khán đài A');
-    for (let row = 1; row <= 3; row++) { // Tạo 3 hàng cho khán đài A
-        for (let i = 1; i <= 10; i++) { // Mỗi hàng có 10 ghế
-            const seatNum = (row - 1) * 10 + i; // Tính số ghế dựa trên 10 ghế mỗi hàng
+    for (let row = 1; row <= 3; row++) { 
+        for (let i = 1; i <= 10; i++) { 
+            const seatNum = (row - 1) * 10 + i; 
             addSeat('A', seatNum);
         }
     }
 
-    // Thêm đường kẻ ngang sau khán đài A
     addFullWidthDivider();
 
-    // Khán đài B
     addStandLabel('Khán đài B');
-    for (let row = 1; row <= 2; row++) { // Tạo 3 hàng cho khán đài B
-        for (let i = 1; i <= 10; i++) { // Mỗi hàng có 10 ghế
+    for (let row = 1; row <= 2; row++) { 
+        for (let i = 1; i <= 10; i++) { 
             const seatNum = (row - 1) * 10 + i;
             addSeat('B', seatNum);
         }
     }
 
-    // Thêm đường kẻ ngang sau khán đài B
     addFullWidthDivider();
 
-    // Khán đài C
     addStandLabel('Khán đài C');
-    for (let row = 1; row <= 3; row++) { // Tạo 3 hàng cho khán đài C
-        for (let i = 1; i <= 10; i++) { // Mỗi hàng có 10 ghế
+    for (let row = 1; row <= 3; row++) { 
+        for (let i = 1; i <= 10; i++) { 
             const seatNum = (row - 1) * 10 + i;
             addSeat('C', seatNum);
         }
     }
 
-    // Thêm đường kẻ ngang sau khán đài C
     addFullWidthDivider();
 
-    // Khán đài D (Dưới)
     addStandLabel('Khán đài D');
-    for (let row = 1; row <= 2; row++) { // Tạo 4 hàng cho khán đài D
-        for (let i = 1; i <= 10; i++) { // Mỗi hàng có 10 ghế
+    for (let row = 1; row <= 2; row++) { 
+        for (let i = 1; i <= 10; i++) {
             const seatNum = (row - 1) * 10 + i;
             addSeat('D', seatNum);
         }
@@ -64,10 +58,6 @@ function addFullWidthDivider() {
     divider.classList.add('full-width-divider');
     document.querySelector('.stadium-map').appendChild(divider);
 }
-
-
-
-
 
 
 

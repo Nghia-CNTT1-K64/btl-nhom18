@@ -1,10 +1,6 @@
-// Lấy tất cả các nút có id là "showTableButton"
 const toggleButtons = document.querySelectorAll('#showTableButton');
-
-// Lấy phần tử có id là "tableContainer"
 const tableContainer = document.getElementById('tableContainer');
 
-// Hàm để cập nhật thông tin đội
 function updateTeamInfo(button) {
     const teamName = button.dataset.team;
     const teamLogo = button.dataset.logo;
@@ -12,37 +8,32 @@ function updateTeamInfo(button) {
     const nextFixture = button.dataset.nextFixture.split(',');
     const positionData = button.dataset.positionData.split(',');
 
-    // Cập nhật tên đội và logo
     const teamInfo = document.querySelector('#tableContainer .team-info');
     teamInfo.querySelector('h1').textContent = teamName;
     teamInfo.querySelector('.logo').src = teamLogo;
 
-    // Cập nhật kết quả gần đây nhất
     const latestResultElem = document.querySelector('#tableContainer .latest-result');
     latestResultElem.querySelector('p').textContent = `Latest Result: ${latestResult[0]}`;
     latestResultElem.querySelector('.match .team-logo:first-child').src = latestResult[1];
     latestResultElem.querySelector('.match .score').textContent = `${latestResult[2]} - ${latestResult[3]}`;
     latestResultElem.querySelector('.match .team-logo:last-child').src = latestResult[4];
 
-    // Cập nhật trận đấu sắp tới
     const nextFixtureElem = document.querySelector('#tableContainer .latest-result-2');
     nextFixtureElem.querySelector('p').textContent = `Latest Fixture: ${nextFixture[0]}`;
     nextFixtureElem.querySelector('.fixture .team-logo:first-child').src = nextFixture[1];
     nextFixtureElem.querySelector('.fixture .time').textContent = nextFixture[2];
     nextFixtureElem.querySelector('.fixture .team-logo:last-child').src = nextFixture[3];
 
-    // Cập nhật biểu đồ vị trí
     const svg = document.querySelector('#tableContainer svg');
     const polyline = svg.querySelector('polyline');
     polyline.setAttribute('points', positionData.map((pos, index) => `${50 + index * 100},${50 + (pos - 1) * 50}`).join(' '));
 
-    // Cập nhật các điểm dữ liệu trên biểu đồ
     const circles = svg.querySelectorAll('circle');
     circles.forEach((circle, index) => {
         circle.setAttribute('cy', 50 + (positionData[index] - 1) * 50);
     });
 }
-// Thêm style cho transition màu sắc
+
 const style = document.createElement('style');
 style.textContent = `
     #showTableButton {
@@ -69,15 +60,14 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Thêm sự kiện click cho mỗi nút với hiệu ứng màu
 toggleButtons.forEach(button => {
     button.addEventListener('click', function() {
-        // Reset màu của tất cả các nút
+  
         toggleButtons.forEach(btn => {
             btn.classList.remove('active');
         });
         
-        // Toggle hiển thị của tableContainer
+       
         if (tableContainer.style.display === 'none' || tableContainer.style.display === '') {
             tableContainer.style.display = 'block';
             this.classList.add('active'); // Thêm class active khi hiển thị bảng
@@ -86,7 +76,7 @@ toggleButtons.forEach(button => {
             this.classList.remove('active'); // Xóa class active khi ẩn bảng
         }
         
-        // Cập nhật thông tin đội
+       
         updateTeamInfo(this);
         
         // Thay đổi biểu tượng mũi tên

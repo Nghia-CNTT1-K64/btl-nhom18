@@ -15,12 +15,12 @@ function filterByMonth(selectedMonth) {
         if (selectedMonth === 'all') {
             vongDau.style.display = 'block';
         } else if (selectedMonth === 'latest') {
-            // Hiển thị vòng đấu mới nhất
+            
             const vongs = Array.from(vongDaus);
             vongs.forEach(v => v.style.display = 'none');
             vongs[vongs.length - 1].style.display = 'block';
         } else {
-            // Lấy tháng từ thời gian trong vòng đấu
+
             const dateText = vongDau.querySelector('p').textContent;
             const month = dateText.match(/Tháng (\d+)/)[1];
             vongDau.style.display = (month === selectedMonth) ? 'block' : 'none';
@@ -33,7 +33,6 @@ function filterMatches() {
     const selectedClub = document.getElementById('clubs').value;
     const selectedRound = document.getElementById('rounds').value;
     
-    // Lấy tất cả vòng đấu
     const vongDaus = document.querySelectorAll('.vong-dau');
     
     vongDaus.forEach(vongDau => {
@@ -49,17 +48,14 @@ function filterMatches() {
                 const clubs = tbody.getAttribute('data-club').split(',');
                 let showMatch = true;
                 
-                // Kiểm tra điều kiện lọc theo đội
                 if (selectedClub !== 'all' && !clubs.includes(selectedClub)) {
                     showMatch = false;
                 }
                 
-                // Kiểm tra điều kiện lọc theo vòng đấu
                 if (selectedRound !== 'all' && roundNumber !== selectedRound) {
                     showMatch = false;
                 }
-                
-                // Hiển thị hoặc ẩn trận đấu
+        
                 tbody.style.display = showMatch ? 'table-row-group' : 'none';
                 
                 if (showMatch) {
@@ -67,8 +63,7 @@ function filterMatches() {
                     hasVisibleMatch = true;
                 }
             });
-            
-            // Ẩn/hiện header của bảng (phần thứ ngày) và bảng
+        
             const tableHeader = table.querySelector('h3');
             const tableDate = table.querySelector('p');
             const tableThead = table.querySelector('thead');
@@ -79,7 +74,6 @@ function filterMatches() {
             table.style.display = hasVisibleMatchInTable ? 'table' : 'none';
         });
         
-        // Ẩn/hiện toàn bộ vòng đấu nếu không có trận đấu nào được hiển thị
         vongDau.style.display = hasVisibleMatch ? 'block' : 'none';
     });
 }
@@ -98,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (this.textContent === 'Tất cả') {
                 month = 'all';
             } else {
-                // Lấy số tháng từ text (ví dụ: "Tháng 1" -> "1")
+                
                 month = this.textContent.match(/\d+/)[0];
             }
             
@@ -106,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Thêm hiệu ứng loading khi lọc
+    
     const searchButton = document.querySelector('button');
     searchButton.addEventListener('click', function() {
         this.classList.add('loading');
@@ -117,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Thêm hàm reset bộ lọc
+
 function resetFilters() {
     document.getElementById('clubs').value = 'all';
     document.getElementById('rounds').value = 'all';

@@ -4,19 +4,19 @@ document.getElementById('globalSearchPlayer').addEventListener('input', function
     const players = document.querySelectorAll('.player-card');
     const resultContainer = document.getElementById('searchResults');
 
-    resultContainer.innerHTML = '';  // Xóa kết quả cũ
+    resultContainer.innerHTML = ''; 
 
     if (searchValue === '') {
-        resultContainer.style.display = 'none'; // Ẩn kết quả nếu thanh tìm kiếm trống
+        resultContainer.style.display = 'none'; 
         return;
     }
 
-    resultContainer.style.display = 'block';  // Hiển thị kết quả khi có nội dung tìm kiếm
+    resultContainer.style.display = 'block';  
 
     players.forEach(player => {
         const playerName = player.getAttribute('data-name').toLowerCase();
-        const playerLink = player.getAttribute('data-link'); // Lấy link của cầu thủ
-        const playerImg = player.getAttribute('data-img');   // Lấy link hình ảnh cầu thủ
+        const playerLink = player.getAttribute('data-link'); 
+        const playerImg = player.getAttribute('data-img');   
 
         if (playerName.includes(searchValue)) {
             const playerInfo = `
